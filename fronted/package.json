@@ -1,0 +1,63 @@
+{
+  "name": "SQream_task_shani_toledano",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve --port 4204",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.0.6",
+    "@angular/cdk": "^14.0.5",
+    "@angular/common": "^14.0.6",
+    "@angular/compiler": "^14.0.6",
+    "@angular/core": "^14.0.6",
+    "@angular/flex-layout": "^14.0.0-beta.40",
+    "@angular/forms": "^14.0.6",
+    "@angular/material": "^14.0.5",
+    "@angular/platform-browser": "^14.0.6",
+    "@angular/platform-browser-dynamic": "^14.0.6",
+    "@angular/router": "^14.0.6",
+    "@ngxs-labs/dispatch-decorator": "^4.0.2",
+    "@ngxs-labs/select-snapshot": "^4.0.0",
+    "@ngxs/router-plugin": "^3.7.3",
+    "@ngxs/storage-plugin": "^3.7.3",
+    "@ngxs/store": "^3.7.3",
+    "bootstrap": "3.3.7",
+    "browserify-fs": "^1.0.0",
+    "fs": "0.0.1-security",
+    "ngx-cookie-service": "^13.2.0",
+    "ngx-mask": "^13.1.10",
+    "ngx-toastr": "^14.3.0",
+    "rxjs": "^7.8.0",
+    "stream-browserify": "^3.0.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.0.6",
+    "@angular/cli": "^14.0.6",
+    "@angular/compiler-cli": "^14.0.6",
+    "@ngxs/devtools-plugin": "^3.7.1",
+    "@types/jasmine": "^3.10.7",
+    "@types/node": "^12.20.55",
+    "jasmine": "^4.5.0",
+    "jasmine-core": "^4.5.0",
+    "karma": "^6.3.20",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "^4.0.2",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "prettier": "^2.6.2",
+    "prettier-eslint": "13.0.0",
+    "typescript": "~4.6.2"
+  }
+}

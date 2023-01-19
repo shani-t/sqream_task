@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: npm start
+    ports:
+      - "4204:4204"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
