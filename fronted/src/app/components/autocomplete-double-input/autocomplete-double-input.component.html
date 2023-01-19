@@ -1,0 +1,15 @@
+<mat-form-field appearance="outline" class="autocomplete-double-input">
+    <mat-label>{{label}}</mat-label>
+    <input matInput [formControl]="myControl" [matAutocomplete]="auto" cdkFocusInitial (blur)="validate()">
+    <mat-icon matSuffix>search</mat-icon>
+    <mat-error>{{error}}</mat-error>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filteredOptions" [value]="option">
+            <div style="pointer-events: none;">        
+                <div>
+                    {{option.title}}
+                </div>
+            </div>
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
