@@ -1,0 +1,44 @@
+
+
+.sq-pagination {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    height: 100px;
+    flex: none;
+    align-items: center;
+    font-size: 18px;
+    // position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+
+    &__center {
+        display: flex;
+        align-items: center;
+
+        .sq-page-number {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background-color: white;
+            border: 1px solid #b1b8c1;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    }
+
+    .sq-dots {
+        margin: 0 5px;
+    }
+}
+.sq-right-side,
+.sq-left-side {
+    width: 300px;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+.sq-number-of-rows {
+    width: 0;
+    height: 0;
+}

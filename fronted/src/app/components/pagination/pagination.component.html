@@ -1,0 +1,33 @@
+<div class="sq-pagination">
+    <div class="sq-left-side"></div>
+    <div class="sq-pagination__center">
+        <button mat-icon-button [disabled]="currentPage === 1" (click)="currentPage = currentPage - 1">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <input matInput #pageInput class="sq-page-number" type="number" [ngModel]="currentPage"
+            (blur)="currentPage = +$event.target" (keyup.enter)="currentPage = +$event.target"
+            [matTooltip]="pageInput.value" [matTooltipDisabled]="+pageInput.value < 100" matTooltipPosition="above">
+        <span class="sq-dots">...</span>
+        <span>{{lastPage}}</span>
+        <button mat-icon-button [disabled]="currentPage === +lastPage" (click)="currentPage = +currentPage + 1">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+    </div>
+    <div class="sq-right-side sq-d-flex sq-font-2 ">
+        <div class="sq-d-flex sq-me-20">
+            <div class="sq-me-20">Number of rows</div>
+            <div class="sq-d-flex sq-align-center sq-cursor-pointer" [matMenuTriggerFor]="menu">
+                <div>{{pageSize}}</div>
+                <mat-icon>keyboard_arrow_up</mat-icon>
+            </div>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="pageSizeChange.emit(2)">2</button>
+                <button mat-menu-item (click)="pageSizeChange.emit(5)">5</button>
+                <button mat-menu-item (click)="pageSizeChange.emit(10)">10</button>
+                <button *ngIf="support500Records" mat-menu-item (click)="pageSizeChange.emit(500)">500</button>
+            </mat-menu>
+        </div>
+
+        <div>{{currentRows}}</div>
+    </div>
+</div>
