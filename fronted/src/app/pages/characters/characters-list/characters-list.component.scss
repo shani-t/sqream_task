@@ -1,0 +1,34 @@
+
+.table-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+sq-pagination {
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.characters-table{
+    width: 100%;
+}
+.test{
+    overflow: auto;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 70vh;
+    height: 40vh;
+    position: fixed;
+    width: -webkit-fill-available;
+    ::ng-deep .mat-progress-spinner circle,
+    .mat-spinner circle {
+      stroke: #aaa;
+    }
+  }
