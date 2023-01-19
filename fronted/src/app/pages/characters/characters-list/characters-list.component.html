@@ -1,0 +1,28 @@
+<div class="table-wrapper">
+  <div>
+    <div class="sq-empty-state-wrapper" *ngIf="!(characters$ | async)?.length">
+      <sq-zero-state class="sq-align-self-center"></sq-zero-state>
+    </div>
+    <div *ngIf="(characters$ | async)?.length > 0">
+      <table mat-table [@.disabled]="true" [dataSource]="characters$ | async" class="mat-elevation-z8 characters-table" matSort
+         matSortDisableClear matSortStart="desc">
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element?.name | none }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="(loading$ | async)" class="loading">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <sq-pagination [lastPage]="lastPage$ | async" [currentRows]="currentRows$ | async"
+    [currentPage]="currentPage$ | async" (currentPageChange)="currentPageChange($event)" [pageSize]="pageSize$ | async"
+    (pageSizeChange)="changePageSize($event)"></sq-pagination>
+</div>
