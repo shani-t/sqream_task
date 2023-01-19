@@ -1,0 +1,30 @@
+
+.filters-button {
+  min-width: 85px;
+}
+
+.mat-form-field,
+.mat-checkbox {
+  margin-inline-end: 24px;
+}
+.filters-layout {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__fields,
+  &__actions {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  &__fields {
+      flex-grow: 1;
+  }
+  &__actions {
+      flex-shrink: 1;
+  }
+}
