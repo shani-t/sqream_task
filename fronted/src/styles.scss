@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f5;
+}
+.sq-font-bold {
+    font-weight: bold;
+}
+.sq-font-normal {
+    font-weight: normal;
+}
+.sq-empty-state-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.sq-align-self-center {
+    align-self: center;
+}
