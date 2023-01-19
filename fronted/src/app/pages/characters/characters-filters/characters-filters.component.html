@@ -1,0 +1,14 @@
+<mat-card class="filters-layout">
+  <div class="filters-layout__fields">
+    <ng-content select="[fields]"></ng-content>
+    <ng-container fields>
+      <!-- <mat-form-field appearance="outline" class="gp-flex-grow gp-without-error gp-my-8">
+        <mat-label>Search</mat-label>
+        <input matInput [ngModel]="searchText" (ngModelChange)="setSearchText($event)" (keyup.enter)="apply()">
+      </mat-form-field> -->
+      <sq-autocomplete-double-input [filteredOptions]="filteredOptions | async" (searchChange)="setSearch($event)"
+            (selectedChange)="filmSelected($event)" [search]="selectedFilm | async" label="Film name or id">
+      </sq-autocomplete-double-input>
+    </ng-container>
+  </div>
+</mat-card>
