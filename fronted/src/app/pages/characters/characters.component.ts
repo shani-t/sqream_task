@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { InitState, Store } from '@ngxs/store';
 
 @Component({
   selector: 'app-characters',
@@ -8,12 +7,9 @@ import { InitState, Store } from '@ngxs/store';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(
-    private store: Store,
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    // this.store.dispatch(new InitState());
   }
 
 }
