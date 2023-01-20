@@ -62,8 +62,14 @@ export class CharactersFiltersComponent implements OnInit {
     );
   }
 
-  setSearch(title){
-    this.changedFilm$.next(title);
+  setSearch(value: any){
+    let title = value;
+    if(value && typeof value == 'object'){
+      title = value?.title;
+    }
+    if (title && title !== ""){
+      this.changedFilm$.next(title);
+    }
   }
   
 
