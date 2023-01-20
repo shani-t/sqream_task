@@ -1,14 +1,12 @@
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import {} from 'jasmine';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxsModule, Store } from '@ngxs/store';
-import { By } from '@angular/platform-browser';
+import { NgxsModule } from '@ngxs/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CharactersResolverService } from './characters-resolver.service';
 import { CharactersState } from './store/characters.state';
-import { catchError, map, of } from 'rxjs';
 
 describe('CharactersResolverService', () => {
   let service: CharactersResolverService;
